@@ -17,7 +17,7 @@ header {
 
 .slider img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
 .line {
@@ -33,19 +33,94 @@ header {
 
 .line span {
     display: inline-block;
-    height: 100%;
+    height: 80%;
     width: 30%;
-    background: rgb(255,255,255,0.5);
+    background: rgb(255,255,255,0.4);
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.line span:hover {
+    transform: scaleY(1.5);
+    
 }
 
 .line span.active {
     background: rgb(255,255,255);
 }
 
-.slider .photo{
+.slider .photo {
     position: absolute;
     color: white;
     top: 50%;
     left: 55%;
     font-size: 4rem;
+}
+
+.arrows {
+    color: white; 
+    opacity: 0.5;
+}
+
+.arrows:hover {
+    opacity: 1;
+}
+
+.arrows .fa-chevron-left {
+    position: absolute;
+    top: 50%;
+    left: 2%; 
+    display: none;  
+    font-size: 2.5rem;
+}
+
+.arrows .fa-chevron-right {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    display: none; 
+    font-size: 2.5rem; 
+    
+}
+
+header:hover .arrows .fa-chevron-left {
+    display: block;
+    animation: arrow 0.3s linear;
+}
+
+header:hover .arrows .fa-chevron-right {
+    display: block;
+    animation: arrow2 0.3s linear;
+}
+
+@media (max-width: 640px) {
+    .slider .photo {
+        font-size: 2.8rem;
+        top: 45%;
+        left: 45%;
+    }
+
+    .line {
+        display: none;
+    }
+}
+
+@keyframes arrow {
+    0% {
+        left: 3%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes arrow2 {
+    0% {
+        right: 3%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.5;
+    }
 }
