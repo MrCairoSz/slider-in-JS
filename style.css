@@ -10,9 +10,9 @@ body {
 
 header {
     width: 100vw;
-    height: 100vh;
-    background: red;
+    height: 80vh;
     overflow: hidden;
+    position: relative;
 }
 
 .slider img {
@@ -45,7 +45,7 @@ header {
 .slider .photo{
     position: absolute;
     color: white;
-    top: 60%;
+    top: 50%;
     left: 55%;
     font-size: 4rem;
 }
